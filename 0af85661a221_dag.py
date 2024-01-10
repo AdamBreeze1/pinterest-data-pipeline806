@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 #Define params for Submit Run Operator
 notebook_task = {
-    'notebook_path': '/Users/adambreeze99@gmail.com/Accessing AWS S3 Bucket from Databricks using IAM role authentication',
+    'notebook_path': '/Users/adambreeze99@gmail.com/extract_and_transform_from_mounted_S3_bucket',
 }
 
 
@@ -39,7 +39,7 @@ with DAG('0af85661a221_dag',
         task_id='submit_run',
         # the connection we set-up previously
         databricks_conn_id='databricks_default',
-        existing_cluster_id='Pinterest Cluster',
+        existing_cluster_id='1108-162752-8okw8dgg',
         notebook_task=notebook_task
     )
     opr_submit_run
