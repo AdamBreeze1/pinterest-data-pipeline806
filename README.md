@@ -48,7 +48,7 @@ command, ensuring that env.yml is present in the project:
 
 ## The data
 
-In order to emulate the kind of data that Pinterest's engineers are likely to work with, this project contains a script, [main_user_posting_emulation.py](user_posting_scripts/main_user_posting_emulation.py) that when run from the terminal mimics the stream of random data points received by the Pinterest API when POST requests are made by users uploading data to Pinterest.
+In order to emulate the kind of data that Pinterest's engineers are likely to work with, this project contains a script, [main_user_posting_emulation_cosole_testing.py](user_posting_scripts/main_user_posting_emulation_cosole_testing.py) that when run from the terminal mimics the stream of random data points received by the Pinterest API when POST requests are made by users uploading data to Pinterest.
 
 Running the script instantiates a database connector class, which is used to connect to an AWS RDS database containing the following tables:
 
