@@ -48,7 +48,7 @@ command, ensuring that env.yml is present in the project:
 
 ## The data
 
-In order to emulate the kind of data that Pinterest's engineers are likely to work with, this project contains a script, [main_user_posting_emulation_cosole_testing.py](user_posting_scripts/main_user_posting_emulation_cosole_testing.py) that when run from the terminal mimics the stream of random data points received by the Pinterest API when POST requests are made by users uploading data to Pinterest.
+In order to emulate the kind of data that Pinterest's engineers are likely to work with, this project contains a script, [main_user_posting_emulation_cosole_testing.py](#user_posting_scripts/main_user_posting_emulation_cosole_testing.py) that when run from the terminal mimics the stream of random data points received by the Pinterest API when POST requests are made by users uploading data to Pinterest.
 
 Running the script instantiates a database connector class, which is used to connect to an AWS RDS database containing the following tables:
 
@@ -56,7 +56,7 @@ Running the script instantiates a database connector class, which is used to con
 - `geolocation_data` contains data about the geolocation of each Pinterest post found in pinterest_data
 - `user_data` contains data about the user that has uploaded each post found in pinterest_data
 
-The `run_infinite_post_data_loop()` method infinitely iterates at random intervals between 0 and 2 seconds, selecting all columns of a random row from each of the three tables and writing the data to a dictionary. The three dictionaries are then printed to the console.
+The methods in each of the [main_user_posting_emulation...](#user_posting_scripts/) scripts infinitely iterates at random intervals between 0 and 2 seconds, selecting all columns of a random row from each of the three tables and writing the data to a dictionary. The three dictionaries are then printed to the console.
 
 Examples of the data generated look like the following:
 
@@ -696,8 +696,8 @@ The Jupyter notebook [read_and_transform_data_from_kinesis.ipynb](databricks_not
     - deserialising the stream data - converts the binary data format to a dataframe using schema defined above
     - writing streaming data to Delta tables using Spark writeStream function
 6. Define schema for deserialised data
-7. Invoke get_stream function for all three streams
-8. Invoke deserialise_stream function for all three streams
+7. Invoke get_kinesis_stream function for all three streams
+8. Deserialise the three streams using the from_json function
 9. Clean all three streams
 10. Display the streams
 11. Write the streams to Delta tables
