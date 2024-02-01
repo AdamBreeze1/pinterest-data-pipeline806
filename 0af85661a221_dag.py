@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 #Define params for Submit Run Operator
 notebook_task = {
-    'notebook_path': '/Users/adambreeze99@gmail.com/extract_and_transform_from_mounted_S3_bucket',
+    'notebook_path': '/Users/adambreeze99@gmail.com/transform_data_from_mounted_S3_bucket',
 }
 
 
